@@ -2,7 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Cabinets Plus</title>
+    <meta name="description" content="Cabinets, kitchens, bathrooms, and more">
+    <title>Custom Cabinets</title>
+    <link rel="shortcut icon" href="./images/cabinet-logo.jpg"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="app.css" rel="stylesheet">
@@ -18,7 +20,10 @@
     <body>
     <div class="main-container">
       <header>
-        <a href="./index.html" id="logo">Cabinets Plus</a>
+        <a href="./index.html" id="logo">
+          Cabinets Plus
+          <h6>30+ Years of Imagination and Precision</h6>
+        </a>
         <nav>
           <a href="#" id="menu-icon"></a>
           <ul>
@@ -32,34 +37,197 @@
       <script type="text/javascript">
         $(document).ready(function() {
             $("#lightgallery")
-            .lightGallery({
-              thumbnail : true
-            })
             .justifiedGallery({
-              margins : 10
-            }); 
+              rowHeight:120,
+              margins:20
+            }).on('jg.complete', function () {
+                $(this).find('div').lightGallery({
+                  thumbnail:true,
+                  counter:false
+                });
+            });
+        });
+        var count = 31;
+        $(window).scroll(function() {
+            if($(window).scrollTop() + $(window).height() == $(document).height()) {
+                for (var i = 0; i < 5; i++) {
+                  //number of images in folder
+                  if(count <= 48){
+                    $('#lightgallery').append('<div>'+
+                      '<a class="jg-entry" href="./images/bathrooms/bathroom-'
+                      + count +'.jpg">' +
+                      '<img src="./images/bathrooms/bathroom-'
+                      + count +'.jpg">' + 
+                      '</a>'+
+                      '</div>'
+                    );
+                  }
+                  count++;
+                }
+                $('#lightgallery')
+                .justifiedGallery('norewind')
+                .on('jg.complete', function () {
+                  $(this).find('div').lightGallery({
+                    thumbnail:true,
+                    counter:false
+                  });
+                });
+            }
         });
       </script>  
       <section>
-        <div id="lightgallery" class="list-unstyled justified-gallery">
-          <a class="jg-entry" href="16.jpg">
-            <img class="img-responsive" src="16.jpg"/>
-          </a>
-          <a class="jg-entry" href="17.jpg">
-            <img class="img-responsive" src="17.jpg"/>
-          </a>
-          <a class="jg-entry" href="16.jpg">
-            <img class="img-responsive" src="16.jpg"/>
-          </a>
-          <a class="jg-entry" href="17.jpg">
-            <img class="img-responsive" src="17.jpg"/>
-          </a>
-          <a class="jg-entry" href="16.jpg">
-            <img class="img-responsive" src="16.jpg"/>
-          </a>
-          <a class="jg-entry" href="17.jpg">
-            <img class="img-responsive" src="17.jpg"/>
-          </a> 
+        <h4>Bathrooms</h4>
+        <div id="lightgallery" class="justified-gallery">
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-1.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-1.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-2.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-2.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-3.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-3.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-4.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-4.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-5.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-5.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-6.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-6.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-7.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-7.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-8.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-8.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-9.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-9.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-10.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-10.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-11.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-11.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-12.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-12.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-13.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-13.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-14.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-14.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-15.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-15.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-16.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-16.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-17.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-17.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-18.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-18.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-19.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-19.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-20.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-20.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-21.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-21.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-22.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-22.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-23.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-23.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-24.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-24.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-25.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-25.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-26.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-26.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-27.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-27.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-28.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-28.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-29.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-29.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bathrooms/bathroom-30.jpg">
+              <img class="thumb" src="./images/bathrooms/bathroom-30.jpg"/>
+            </a>
+          </div>
         </div>
       </section>
       <footer class="site-footer">
@@ -78,8 +246,8 @@
             <li><a href="contacts.html">Contact Us</a></li>
           </ul>
           <div class="footer-info-2">
-            <p>Phone  (704) 464.2030</p>
-            <p style="margin-left:39px;">(718) 213.3300</p>
+            <p><a href="mailto:Custom4u64@aol.com">Custom4u64@aol.com</a></p>
+            <p>(718) 213.3300</p>
           </div>
         </div>
       </footer>

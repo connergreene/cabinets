@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Cabinets, kitchens, bathrooms, and more">
+    <title>Custom Cabinets</title>
+    <link rel="shortcut icon" href="./images/cabinet-logo.jpg"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.justifiedgallery/3.6.3/css/justifiedGallery.min.css">
+    <script src="https://cdn.jsdelivr.net/jquery.justifiedgallery/3.6.3/js/jquery.justifiedGallery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/lightgallery/1.3.9/css/lightgallery.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/g/lightgallery@1.3.9,lg-thumbnail@1.0.3,lg-fullscreen@1.0.1"></script>
+    <script src="https://cdn.jsdelivr.net/lg-zoom/1.0.4/lg-zoom.min.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <a href="./index.html" id="logo">
+          Cabinets Plus
+          <h6>30+ Years of Imagination and Precision</h6>
+        </a>
+        <nav>
+          <a href="#" id="menu-icon"></a>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html" class="current">Portfolio</a></li>
+            <li><a href="contacts.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+      <script type="text/javascript">
+        $(document).ready(function() {
+            $("#lightgallery")
+            .justifiedGallery({
+              rowHeight:120,
+              margins:20
+            }).on('jg.complete', function () {
+                $(this).find('div').lightGallery({
+                    thumbnail:false,
+                    animateThumb: false,
+                    showThumbByDefault: false,
+                    counter:false
+                });
+            });
+        });
+      </script>  
+      <section>
+        <h4>Bar Units</h4>
+        <div id="lightgallery" class="justified-gallery">
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-1.jpg">
+              <img class="thumb" src="./images/bar-units/bar-1.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-2.jpg">
+              <img class="thumb" src="./images/bar-units/bar-2.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-3.jpg">
+              <img class="thumb" src="./images/bar-units/bar-3.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-4.jpg">
+              <img class="thumb" src="./images/bar-units/bar-4.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-5.jpg">
+              <img class="thumb" src="./images/bar-units/bar-5.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-6.jpg">
+              <img class="thumb" src="./images/bar-units/bar-6.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-7.jpg">
+              <img class="thumb" src="./images/bar-units/bar-7.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-8.jpg">
+              <img class="thumb" src="./images/bar-units/bar-8.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-9.jpg">
+              <img class="thumb" src="./images/bar-units/bar-9.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-10.jpg">
+              <img class="thumb" src="./images/bar-units/bar-10.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-11.jpg">
+              <img class="thumb" src="./images/bar-units/bar-11.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-12.jpg">
+              <img class="thumb" src="./images/bar-units/bar-12.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-13.jpg">
+              <img class="thumb" src="./images/bar-units/bar-13.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-14.jpg">
+              <img class="thumb" src="./images/bar-units/bar-14.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-15.jpg">
+              <img class="thumb" src="./images/bar-units/bar-15.jpg"/>
+            </a>
+          </div>
+          <div>
+            <a class="jg-entry" href="./images/bar-units/bar-16.jpg">
+              <img class="thumb" src="./images/bar-units/bar-16.jpg"/>
+            </a>
+          </div>
+        </div>
+      </section>
+      <footer class="site-footer">
+        <div class="footer-wrapper">
+          <div class="footer-info-1">
+            <p>1618 South Ridge Ave</p>
+            <p>Kannaplois, NC 28083</p>
+          </div>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li>:</li>
+            <li><a href="services.html">Services</a></li>
+            <li>:</li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li>:</li>
+            <li><a href="contacts.html">Contact Us</a></li>
+          </ul>
+          <div class="footer-info-2">
+            <p><a href="mailto:Custom4u64@aol.com">Custom4u64@aol.com</a></p>
+            <p>(718) 213.3300</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
