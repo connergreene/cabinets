@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Cabinets, kitchens, bathrooms, and more">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Cabinets</title>
     <link rel="shortcut icon" href="./images/cabinet-logo.jpg"/>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="app.css" rel="stylesheet">
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.justifiedgallery/3.6.3/css/justifiedGallery.min.css">
     <script src="https://cdn.jsdelivr.net/jquery.justifiedgallery/3.6.3/js/jquery.justifiedGallery.min.js"></script>
@@ -37,102 +38,56 @@
       <script type="text/javascript">
         $(document).ready(function() {
             $("#lightgallery")
+            .lightGallery()
             .justifiedGallery({
-              rowHeight:120,
-              margins:20
-            }).on('jg.complete', function () {
-                $(this).find('div').lightGallery({
-                    thumbnail:false,
-                    animateThumb: false,
-                    showThumbByDefault: false,
-                    counter:false
-                });
+              maxRowHeight:120,
+              margins:20,
+              waitThumbnailsLoad:true
             });
         });
       </script>  
-      <section>
+      <section class="gallery-section">
         <h4>Bar Units</h4>
         <div id="lightgallery" class="justified-gallery">
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-1.jpg">
-              <img class="thumb" src="./images/bar-units/bar-1.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-2.jpg">
-              <img class="thumb" src="./images/bar-units/bar-2.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-3.jpg">
-              <img class="thumb" src="./images/bar-units/bar-3.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-4.jpg">
-              <img class="thumb" src="./images/bar-units/bar-4.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-5.jpg">
-              <img class="thumb" src="./images/bar-units/bar-5.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-6.jpg">
-              <img class="thumb" src="./images/bar-units/bar-6.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-7.jpg">
-              <img class="thumb" src="./images/bar-units/bar-7.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-8.jpg">
-              <img class="thumb" src="./images/bar-units/bar-8.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-9.jpg">
-              <img class="thumb" src="./images/bar-units/bar-9.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-10.jpg">
-              <img class="thumb" src="./images/bar-units/bar-10.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-11.jpg">
-              <img class="thumb" src="./images/bar-units/bar-11.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-12.jpg">
-              <img class="thumb" src="./images/bar-units/bar-12.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-13.jpg">
-              <img class="thumb" src="./images/bar-units/bar-13.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-14.jpg">
-              <img class="thumb" src="./images/bar-units/bar-14.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-15.jpg">
-              <img class="thumb" src="./images/bar-units/bar-15.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bar-units/bar-16.jpg">
-              <img class="thumb" src="./images/bar-units/bar-16.jpg"/>
-            </a>
-          </div>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/9gl2k0cftxkeb6b/bar-1.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/9gl2k0cftxkeb6b/bar-1.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/y9re16s03915kvp/bar-2.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/y9re16s03915kvp/bar-2.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/jn0odk05w0jah07/bar-3.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/jn0odk05w0jah07/bar-3.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/qdg5fzx8ij9quxj/bar-4.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/qdg5fzx8ij9quxj/bar-4.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/k21qiixgdf0z1ct/bar-5.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/k21qiixgdf0z1ct/bar-5.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/c50r993b4nqykwl/bar-6.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/c50r993b4nqykwl/bar-6.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/w18yceok9171prl/bar-7.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/w18yceok9171prl/bar-7.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/05nzt7sv6ym67hk/bar-8.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/05nzt7sv6ym67hk/bar-8.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/ofbsnr2lb1l7un3/bar-9.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/ofbsnr2lb1l7un3/bar-9.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/90gjxm8tkvpqm37/bar-10.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/90gjxm8tkvpqm37/bar-10.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/2c1dwxgwmuwa3t9/bar-11.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/2c1dwxgwmuwa3t9/bar-11.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/4iaunkbbg5m5cbu/bar-12.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/4iaunkbbg5m5cbu/bar-12.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/1w33kur9w4m3xb1/bar-13.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/1w33kur9w4m3xb1/bar-13.jpg?dl=0"/>
+          </a>
         </div>
       </section>
       <footer class="site-footer">
@@ -151,8 +106,8 @@
             <li><a href="contacts.html">Contact Us</a></li>
           </ul>
           <div class="footer-info-2">
-            <p><a href="mailto:Custom4u64@aol.com">Custom4u64@aol.com</a></p>
-            <p>(718) 213.3300</p>
+            <p>(704)464.2030~(718)213.3300</p>
+            <p><a href="mailto:Info@customcabinetteam.com">Info@customcabinetteam.com</a></p>
           </div>
         </div>
       </footer>

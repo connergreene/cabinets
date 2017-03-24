@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Cabinets, kitchens, bathrooms, and more">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Cabinets</title>
     <link rel="shortcut icon" href="./images/cabinet-logo.jpg"/>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="app.css" rel="stylesheet">
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.justifiedgallery/3.6.3/css/justifiedGallery.min.css">
     <script src="https://cdn.jsdelivr.net/jquery.justifiedgallery/3.6.3/js/jquery.justifiedGallery.min.js"></script>
@@ -37,201 +38,110 @@
       <script type="text/javascript">
         $(document).ready(function() {
             $("#lightgallery")
+            .lightGallery()
             .justifiedGallery({
-              rowHeight:120,
-              margins:20
-            }).on('jg.complete', function () {
-                $(this).find('div').lightGallery({
-                    thumbnail:false,
-                    animateThumb: false,
-                    showThumbByDefault: false,
-                    counter:false
-                });
+              maxRowHeight:120,
+              margins:20,
+              waitThumbnailsLoad:true
             });
         });
-        var count = 31;
-        $(window).scroll(function() {
-            if($(window).scrollTop() + $(window).height() == $(document).height()) {
-                for (var i = 0; i < 5; i++) {
-                  //number of images in folder
-                  if(count <= 95){
-                    $('#lightgallery').append('<div>'+
-                      '<a class="jg-entry" href="./images/miscellaneous/miscellaneous-'
-                      + count +'.jpg">' +
-                      '<img src="./images/miscellaneous/miscellaneous-'
-                      + count +'.jpg">' + 
-                      '</a>'+
-                      '</div>'
-                    );
-                  }
-                  count++;
-                }
-                $('#lightgallery')
-                .justifiedGallery('norewind')
-                .on('jg.complete', function () {
-                  $(this).find('div').lightGallery({
-                    thumbnail:false,
-                    animateThumb: false,
-                    showThumbByDefault: false,
-                    counter:false
-                  });
-                });
-            }
-        });
-      </script>  
-      <section>
+      </script> 
+      <section class="gallery-section">
         <h4>Miscellaneous</h4>
         <div id="lightgallery" class="justified-gallery">
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-1.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-1.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-2.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-2.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-3.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-3.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-4.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-4.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-5.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-5.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-6.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-6.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-7.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-7.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-8.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-8.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-9.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-9.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-10.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-10.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-11.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-11.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-12.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-12.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-13.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-13.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-14.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-14.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-15.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-15.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-16.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-16.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-17.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-17.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-18.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-18.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-19.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-19.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-20.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-20.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-21.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-21.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-22.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-22.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-23.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-23.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-24.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-24.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-25.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-25.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-26.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-26.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-27.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-27.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-28.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-28.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-29.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-29.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/miscellaneous/miscellaneous-30.jpg">
-              <img class="thumb" src="./images/miscellaneous/miscellaneous-30.jpg"/>
-            </a>
-          </div>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/1bjp20a7zx01jy7/miscellaneous-1A.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/1bjp20a7zx01jy7/miscellaneous-1A.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/465u7q3mndomw82/miscellaneous-1B.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/465u7q3mndomw82/miscellaneous-1B.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/9dgcdtzyu21uw79/miscellaneous-1C.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/9dgcdtzyu21uw79/miscellaneous-1C.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/2zkxtd5zd8nbdqj/miscellaneous-1D.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/2zkxtd5zd8nbdqj/miscellaneous-1D.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/kptpz1jxv70adum/miscellaneous-1.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/kptpz1jxv70adum/miscellaneous-1.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/6e22huba9felb0d/miscellaneous-2.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/6e22huba9felb0d/miscellaneous-2.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/ifhwwpozqhup0lj/miscellaneous-3.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/ifhwwpozqhup0lj/miscellaneous-3.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/tpbinl55hk1j9ci/miscellaneous-4.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/tpbinl55hk1j9ci/miscellaneous-4.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/ywdkdykjb1pqyhw/miscellaneous-5.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/ywdkdykjb1pqyhw/miscellaneous-5.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/0uncsuqqum3r1xw/miscellaneous-6.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/0uncsuqqum3r1xw/miscellaneous-6.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/qs99tcwfms40y7f/miscellaneous-7.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/qs99tcwfms40y7f/miscellaneous-7.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/4eb58v5d8r1dol4/miscellaneous-8.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/4eb58v5d8r1dol4/miscellaneous-8.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/7kzpdg7d1up5hgv/miscellaneous-9.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/7kzpdg7d1up5hgv/miscellaneous-9.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/yto1q4254o2xg4o/miscellaneous-10.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/yto1q4254o2xg4o/miscellaneous-10.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/a5ziumzfcs7prhf/miscellaneous-11.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/a5ziumzfcs7prhf/miscellaneous-11.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/o0mrt2i2flasfpk/miscellaneous-12.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/o0mrt2i2flasfpk/miscellaneous-12.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/q7vxs2xtsxar5g8/miscellaneous-13.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/q7vxs2xtsxar5g8/miscellaneous-13.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/ul2166r36inj5pm/miscellaneous-14.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/ul2166r36inj5pm/miscellaneous-14.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/uf3vjtv9nuz3vhn/miscellaneous-15.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/uf3vjtv9nuz3vhn/miscellaneous-15.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/ws2s6fk7dgpgbkt/miscellaneous-16.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/ws2s6fk7dgpgbkt/miscellaneous-16.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/bwh12f9ceuzeeop/miscellaneous-17.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/bwh12f9ceuzeeop/miscellaneous-17.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/5shl62ozcyud5ch/miscellaneous-18.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/5shl62ozcyud5ch/miscellaneous-18.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/1w0ej7m9k0sxyju/miscellaneous-19.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/1w0ej7m9k0sxyju/miscellaneous-19.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/yk03te6fbs582z5/miscellaneous-20.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/yk03te6fbs582z5/miscellaneous-20.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/wfqk9orhs6662kr/miscellaneous-21.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/wfqk9orhs6662kr/miscellaneous-21.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/1s5mdiqtamn2x0s/miscellaneous-22.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/1s5mdiqtamn2x0s/miscellaneous-22.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/hfrahq7pexyyzuc/miscellaneous-23.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/hfrahq7pexyyzuc/miscellaneous-23.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/80cpjlrwq77zdnv/miscellaneous-24.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/80cpjlrwq77zdnv/miscellaneous-24.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/3l8vj5ewa8ngr3c/miscellaneous-25.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/3l8vj5ewa8ngr3c/miscellaneous-25.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/ku2k7uw0gb2dcvn/miscellaneous-26.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/ku2k7uw0gb2dcvn/miscellaneous-26.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/fmjqyyc4zipipmp/miscellaneous-27.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/fmjqyyc4zipipmp/miscellaneous-27.jpg?dl=0"/>
+          </a>
         </div>
       </section>
       <footer class="site-footer">
@@ -250,8 +160,8 @@
             <li><a href="contacts.html">Contact Us</a></li>
           </ul>
           <div class="footer-info-2">
-            <p><a href="mailto:Custom4u64@aol.com">Custom4u64@aol.com</a></p>
-            <p>(718) 213.3300</p>
+            <p>(704)464.2030~(718)213.3300</p>
+            <p><a href="mailto:Info@customcabinetteam.com">Info@customcabinetteam.com</a></p>
           </div>
         </div>
       </footer>

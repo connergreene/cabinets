@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Cabinets, kitchens, bathrooms, and more">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Cabinets</title>
     <link rel="shortcut icon" href="./images/cabinet-logo.jpg"/>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="app.css" rel="stylesheet">
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.justifiedgallery/3.6.3/css/justifiedGallery.min.css">
     <script src="https://cdn.jsdelivr.net/jquery.justifiedgallery/3.6.3/js/jquery.justifiedGallery.min.js"></script>
@@ -37,87 +38,47 @@
       <script type="text/javascript">
         $(document).ready(function() {
             $("#lightgallery")
+            .lightGallery()
             .justifiedGallery({
-              rowHeight:120,
-              margins:20
-            }).on('jg.complete', function () {
-                $(this).find('div').lightGallery({
-                    thumbnail:false,
-                    animateThumb: false,
-                    showThumbByDefault: false,
-                    counter:false
-                });
+              maxRowHeight:120,
+              margins:20,
+              waitThumbnailsLoad:true
             });
         });
       </script>  
-      <section>
+      <section class="gallery-section">
         <h4>Fireplace Units</h4>
         <div id="lightgallery" class="justified-gallery">
-          <div>
-            <a class="jg-entry" href="./images/fireplace-units/fireplace-1.jpg">
-              <img class="thumb" src="./images/fireplace-units/fireplace-1.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/fireplace-units/fireplace-2.jpg">
-              <img class="thumb" src="./images/fireplace-units/fireplace-2.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/fireplace-units/fireplace-3.jpg">
-              <img class="thumb" src="./images/fireplace-units/fireplace-3.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/fireplace-units/fireplace-4.jpg">
-              <img class="thumb" src="./images/fireplace-units/fireplace-4.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/fireplace-units/fireplace-5.jpg">
-              <img class="thumb" src="./images/fireplace-units/fireplace-5.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/fireplace-units/fireplace-6.jpg">
-              <img class="thumb" src="./images/fireplace-units/fireplace-6.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/fireplace-units/fireplace-7.jpg">
-              <img class="thumb" src="./images/fireplace-units/fireplace-7.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/fireplace-units/fireplace-8.jpg">
-              <img class="thumb" src="./images/fireplace-units/fireplace-8.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/fireplace-units/fireplace-9.jpg">
-              <img class="thumb" src="./images/fireplace-units/fireplace-9.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/fireplace-units/fireplace-10.jpg">
-              <img class="thumb" src="./images/fireplace-units/fireplace-10.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/fireplace-units/fireplace-11.jpg">
-              <img class="thumb" src="./images/fireplace-units/fireplace-11.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/fireplace-units/fireplace-12.jpg">
-              <img class="thumb" src="./images/fireplace-units/fireplace-12.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/fireplace-units/fireplace-13.jpg">
-              <img class="thumb" src="./images/fireplace-units/fireplace-13.jpg"/>
-            </a>
-          </div>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/niyxxt6s8119rrk/fireplace-1.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/niyxxt6s8119rrk/fireplace-1.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/2w7hlv5lmji3liq/fireplace-2.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/2w7hlv5lmji3liq/fireplace-2.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/56jwqla93p698qo/fireplace-3.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/56jwqla93p698qo/fireplace-3.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/or2d50slz0or76e/fireplace-4.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/or2d50slz0or76e/fireplace-4.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/1jo9zkolmo8nqtn/fireplace-5.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/1jo9zkolmo8nqtn/fireplace-5.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/uoql958glg0jmkx/fireplace-6.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/uoql958glg0jmkx/fireplace-6.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/z2i1r8v88abayou/fireplace-7.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/z2i1r8v88abayou/fireplace-7.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/gfla0lf1jg88j05/fireplace-8.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/gfla0lf1jg88j05/fireplace-8.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/xl0ghwvt3bo2fxv/fireplace-9.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/xl0ghwvt3bo2fxv/fireplace-9.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/kwitksjs8k6xxgf/fireplace-10.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/kwitksjs8k6xxgf/fireplace-10.jpg?dl=0"/>
+          </a>
         </div>
       </section>
       <footer class="site-footer">
@@ -136,8 +97,8 @@
             <li><a href="contacts.html">Contact Us</a></li>
           </ul>
           <div class="footer-info-2">
-            <p><a href="mailto:Custom4u64@aol.com">Custom4u64@aol.com</a></p>
-            <p>(718) 213.3300</p>
+            <p>(704)464.2030~(718)213.3300</p>
+            <p><a href="mailto:Info@customcabinetteam.com">Info@customcabinetteam.com</a></p>
           </div>
         </div>
       </footer>

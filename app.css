@@ -32,9 +32,8 @@ html {
 section {
   margin: 0px auto 40px;
   max-width: 980px;
-  position: relative;
   padding: 20px;
-  top: 75px;
+  margin-top: 75px;
 }
 
 .site-footer {
@@ -60,11 +59,15 @@ section {
   margin-left: 30%;
 }
 
-.site-footer p{
+.site-footer p {
   color : white;
   font-family : 'Lora', serif;
   font-size : 12px;
   margin-bottom: 0px;
+}
+
+.site-footer .footer-info-2 p {
+  float : right;
 }
 
 .footer-info-1 {
@@ -73,7 +76,7 @@ section {
 }
 
 .footer-info-2 {
-  width : 120px;
+  width : 160px;
   float: right;
   margin-top: -50px;
 }
@@ -142,7 +145,14 @@ nav li {
 .nav-numbers {
     color: white;
     text-align: center;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    /*background-color: black;
+    width: 350px;
     margin-bottom: 25px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;*/
 }
 
 h5 {
@@ -227,7 +237,7 @@ p {
 .middle-img {
   float: right;
   width: 50%;
-  height: 315px;
+  height: auto;
 }
 
 .middle-wrapper-1 {
@@ -240,6 +250,16 @@ p {
   display:flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn-wrapper {
+  -o-display:flex;
+  -webkit-display:flex;
+  -ms-display:flex;
+  -moz-display:flex;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:flex;
 }
 
 .middle-header-1 {
@@ -255,7 +275,7 @@ p {
 .middle-img-1 {
   float: left;
   width: 50%;
-  height: 315px;
+  height: auto;
 }
 
 .img-btn-wrapper {
@@ -272,13 +292,13 @@ p {
 .btn-img-l {
   float: right;
   width: 100%;
-  height: 350px; 
+  height: auto; 
 }
 
 .btn-img-r {
   float: left;
   width: 100%;
-  height: 350px;
+  height: 100%;
 }
 
 .text-over-image {
@@ -301,9 +321,10 @@ p {
 
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      width: 100%;
-      height: 530px;
-      margin: auto;
+    width: 100%;
+    height: auto;
+    max-height: 560px;
+    margin: auto;
   }
 
 .carousel-caption {
@@ -311,52 +332,8 @@ p {
   padding-bottom: 0px;
 }
 
-
-/*MEDIA QUERY*/
-@media screen and (max-width : 830px), screen and (max-device-width : 830px) {
-
-  #menu-icon {
-    display:inline-block;
-  }
-
-  nav ul, nav:active ul { 
-    display: none;
-    position: absolute;
-    padding: 20px;
-    background: black;
-    border: 5px solid #444;
-    right: 20px;
-    top: 60px;
-    width: 40%;
-    border-radius: 4px 0 4px 4px;
-    z-index: 1;
-  }
-
-  nav li {
-    text-align: center;
-    width: 100%;
-    padding: 10px 0;
-    margin: 0;
-  }
-
-  nav:hover ul {
-    display: block;
-  }
-
-  .footer-wrapper ul {
-    display : none;
-  }
-
-  .footer-info-2 {
-    margin-top: 0px;
-  }
-}
-
-/*MEDIA QUERY*/
-@media screen and (max-width : 750px), screen and (max-device-width : 750px)  {
-  .text-over-image {
-    font-size: 30px;
-  } 
+.car-wrapper {
+  height : 560px;
 }
 
 h1 {
@@ -516,4 +493,204 @@ iframe {
   float: right;
 }
 
-/*GALLERY*/
+/*RESIZE AND PHONE*/
+@media screen and (max-width : 830px), screen and (max-device-width : 1000px) {
+
+  #menu-icon {
+    display:inline-block;
+  }
+
+  nav ul, nav:active ul { 
+    display: none;
+    position: absolute;
+    padding: 20px;
+    background: black;
+    border: 5px solid #444;
+    right: 20px;
+    top: 60px;
+    width: 50%;
+    border-radius: 4px 0 4px 4px;
+    z-index: 1;
+  }
+
+  nav li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  nav:hover ul {
+    display: block;
+  }
+
+  .footer-wrapper ul {
+    display : none;
+  }
+
+  .footer-info-2 {
+    margin-top: 0px;
+  }
+}
+
+/*MEDIA QUERY*/
+@media screen and (max-width : 750px), screen and (max-device-width : 1000px)  {
+  .text-over-image {
+    font-size: 30px;
+  } 
+
+  .car-wrapper {
+    height : 525px;
+  }
+}
+
+/*phones*/
+@media screen and (max-device-width : 1000px) and (orientation: portrait) {
+  /*MOBILE HOME*/
+  #logo{
+    font-size: 35px;
+  }
+
+  nav a{
+    line-height: 5px;
+  }
+
+  .nav-numbers a {
+    font-size: 19px;
+  }
+
+  .car-wrapper {
+    height: 35vh;
+  }
+  
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    height: 35vh;
+  }
+
+  .carousel-caption h3 {
+    font-size: 15px;
+  }
+
+  .carousel-caption p {
+    font-size: 10px;
+    margin-bottom: 0px;
+  }
+
+  .middle-img {
+    height: auto;
+  }
+
+  .middle-img-1 {
+    height: auto;
+  }
+
+  .middle-header {
+    padding-right: 5px;
+    font-size: 14px;
+  }
+
+  .middle-header-1 {
+    padding-left: 5px;
+    font-size: 14px;
+  }
+
+  .btn-img-r {
+    height: 20vh;
+  }
+
+  .btn-img-l {
+    height: 20vh;
+  }
+
+  .text-over-image {
+    font-size: 22px;
+  }
+
+  /*MOBILE SERVICES*/
+  .service-img-container {
+    display: none;
+  }
+
+  .service-container {
+    width: 100%;
+  }
+
+  /*MOBILE PORTFOLIO*/
+  .port-section .middle-wrapper {
+    position: relative;
+    -o-display: flex;
+    -webkit-display: flex;
+    -ms-display: flex;
+    -moz-display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .port-section .middle-wrapper-1 {
+    position: relative;
+    -o-display: flex;
+    -webkit-display: flex;
+    -ms-display: flex;
+    -moz-display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .port-text {
+    font-size: 32px;
+    color: white;
+    line-height: normal;
+    font-family: 'Lora', serif;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .port-btn-wrapper {
+    width : 95%;
+    max-width: 270px;
+  }
+
+  .gallery-section h4 {
+    font-size: 40px;
+  }
+
+  /*MOBILE CONTACTS*/
+  .contact-wrapper {
+    width: 100%;
+    float: none;
+  }
+
+  iframe {
+    float: none;
+    margin-top: 3vh;
+    height: 40vh;
+    width: auto;
+  }
+}
+
+
+@media screen and (max-device-width : 352px) {
+    .footer-info-1 {
+      display: none;
+    }
+
+    .footer-info-2 {
+      margin-right: 20%;
+    }
+
+}

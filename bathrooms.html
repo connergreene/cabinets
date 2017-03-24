@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Cabinets, kitchens, bathrooms, and more">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Cabinets</title>
     <link rel="shortcut icon" href="./images/cabinet-logo.jpg"/>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="app.css" rel="stylesheet">
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.justifiedgallery/3.6.3/css/justifiedGallery.min.css">
     <script src="https://cdn.jsdelivr.net/jquery.justifiedgallery/3.6.3/js/jquery.justifiedGallery.min.js"></script>
@@ -37,197 +38,86 @@
       <script type="text/javascript">
         $(document).ready(function() {
             $("#lightgallery")
+            .lightGallery()
             .justifiedGallery({
-              rowHeight:120,
-              margins:20
-            }).on('jg.complete', function () {
-                $(this).find('div').lightGallery({
-                  thumbnail:true,
-                  counter:false
-                });
+              maxRowHeight:120,
+              margins:20,
+              waitThumbnailsLoad:true
             });
         });
-        var count = 31;
-        $(window).scroll(function() {
-            if($(window).scrollTop() + $(window).height() == $(document).height()) {
-                for (var i = 0; i < 5; i++) {
-                  //number of images in folder
-                  if(count <= 48){
-                    $('#lightgallery').append('<div>'+
-                      '<a class="jg-entry" href="./images/bathrooms/bathroom-'
-                      + count +'.jpg">' +
-                      '<img src="./images/bathrooms/bathroom-'
-                      + count +'.jpg">' + 
-                      '</a>'+
-                      '</div>'
-                    );
-                  }
-                  count++;
-                }
-                $('#lightgallery')
-                .justifiedGallery('norewind')
-                .on('jg.complete', function () {
-                  $(this).find('div').lightGallery({
-                    thumbnail:true,
-                    counter:false
-                  });
-                });
-            }
-        });
       </script>  
-      <section>
+      <section class="gallery-section">
         <h4>Bathrooms</h4>
         <div id="lightgallery" class="justified-gallery">
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-1.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-1.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-2.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-2.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-3.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-3.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-4.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-4.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-5.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-5.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-6.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-6.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-7.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-7.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-8.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-8.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-9.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-9.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-10.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-10.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-11.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-11.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-12.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-12.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-13.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-13.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-14.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-14.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-15.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-15.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-16.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-16.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-17.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-17.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-18.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-18.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-19.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-19.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-20.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-20.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-21.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-21.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-22.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-22.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-23.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-23.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-24.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-24.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-25.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-25.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-26.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-26.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-27.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-27.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-28.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-28.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-29.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-29.jpg"/>
-            </a>
-          </div>
-          <div>
-            <a class="jg-entry" href="./images/bathrooms/bathroom-30.jpg">
-              <img class="thumb" src="./images/bathrooms/bathroom-30.jpg"/>
-            </a>
-          </div>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/29hdkbbncxcuqbc/bathroom-1.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/29hdkbbncxcuqbc/bathroom-1.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/g48qy5zll78cvdi/bathroom-2.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/g48qy5zll78cvdi/bathroom-2.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/bj53wv114uz67ie/bathroom-3.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/bj53wv114uz67ie/bathroom-3.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/4gdmub02s4lozio/bathroom-4.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/4gdmub02s4lozio/bathroom-4.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/d7hjzgbptwzjtdp/bathroom-5.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/d7hjzgbptwzjtdp/bathroom-5.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/wi94lbw2xot0frx/bathroom-6.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/wi94lbw2xot0frx/bathroom-6.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/xyuke5as3d5v8k4/bathroom-7.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/xyuke5as3d5v8k4/bathroom-7.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/ltqdagqbys1ioya/bathroom-8.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/ltqdagqbys1ioya/bathroom-8.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/oi12zt4jnfnnrxc/bathroom-9.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/oi12zt4jnfnnrxc/bathroom-9.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/ovdkazu7pndsnh7/bathroom-10.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/ovdkazu7pndsnh7/bathroom-10.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/h8aligkce4hwi69/bathroom-11.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/h8aligkce4hwi69/bathroom-11.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/sp8opbksb9aavr0/bathroom-12.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/sp8opbksb9aavr0/bathroom-12.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/f36743komk1gtv3/bathroom-13.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/f36743komk1gtv3/bathroom-13.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/0abvntvpqpykb48/bathroom-14.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/0abvntvpqpykb48/bathroom-14.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/dopj1yqgj9mal6a/bathroom-15.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/dopj1yqgj9mal6a/bathroom-15.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/cn98vnoyi3b9q6g/bathroom-16.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/cn98vnoyi3b9q6g/bathroom-16.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/vigw5z7ltlqq3nh/bathroom-17.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/vigw5z7ltlqq3nh/bathroom-17.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/puswlrpe4t37tlc/bathroom-18.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/puswlrpe4t37tlc/bathroom-18.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/dfuseq3z0ztr2yx/bathroom-19.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/dfuseq3z0ztr2yx/bathroom-19.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/erph9n9zac835g0/bathroom-20.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/erph9n9zac835g0/bathroom-20.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/i5k2wiggjsy22fs/bathroom-21.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/i5k2wiggjsy22fs/bathroom-21.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/pxp6fg9sdmgfdmu/bathroom-22.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/pxp6fg9sdmgfdmu/bathroom-22.jpg?dl=0"/>
+          </a>
+          <a class="jg-entry" href="https://dl.dropboxusercontent.com/s/csa4zc801ez64gw/bathroom-23.jpg?dl=0">
+            <img class="thumb" src="https://dl.dropboxusercontent.com/s/csa4zc801ez64gw/bathroom-23.jpg?dl=0"/>
+          </a>
         </div>
       </section>
       <footer class="site-footer">
@@ -246,8 +136,8 @@
             <li><a href="contacts.html">Contact Us</a></li>
           </ul>
           <div class="footer-info-2">
-            <p><a href="mailto:Custom4u64@aol.com">Custom4u64@aol.com</a></p>
-            <p>(718) 213.3300</p>
+            <p>(704)464.2030~(718)213.3300</p>
+            <p><a href="mailto:Info@customcabinetteam.com">Info@customcabinetteam.com</a></p>
           </div>
         </div>
       </footer>
