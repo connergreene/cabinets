@@ -531,6 +531,55 @@ iframe {
   .footer-info-2 {
     margin-top: 0px;
   }
+  
+  .port-section .middle-wrapper {
+    position: relative;
+    -o-display: flex;
+    -webkit-display: flex;
+    -ms-display: flex;
+    -moz-display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .port-section .middle-wrapper-1 {
+    position: relative;
+    -o-display: flex;
+    -webkit-display: flex;
+    -ms-display: flex;
+    -moz-display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .port-text {
+    font-size: 32px;
+    color: white;
+    line-height: normal;
+    font-family: 'Lora', serif;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .port-btn-wrapper {
+    width : 95%;
+    max-width: 270px;
+  }
 }
 
 /*MEDIA QUERY*/
@@ -680,6 +729,10 @@ iframe {
     margin-top: 3vh;
     height: 40vh;
     width: auto;
+  }
+
+  .contact-section p {
+    font-size: 20px;
   }
 }
 
