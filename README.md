@@ -1,1 +1,1 @@
-[Check Out the site!](http://customcabinetrync.com/)
+[Check out the site!](http://customcabinetrync.com/)
